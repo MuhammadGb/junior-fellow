@@ -1,7 +1,6 @@
 import * as React from 'react';
 import banner from '../assets/banner.jpeg';
-import { Box, Image, Text } from '@chakra-ui/react';
-import '../assets/fonts.css';
+import { Box, Image, Text, Input } from '@chakra-ui/react';
 
 export default function Banner() {
   return (
@@ -19,14 +18,13 @@ export default function Banner() {
           sx={{
               width: "26%",
               position: "relative",
-              zIndex: 1,
+              zIndex: 0,
               left: 80,
               top: 40,
               fontSize: "76px",
-              letterSpacing: "-3px", 
+              letterSpacing: "-1px", 
               fontWeight: 600,
               fontFamily: "Dm Sans",
-              border: "2px solid blue",
               color: "#FFFFFF"
               }}
         >Watch something incredible.</Text>
@@ -37,12 +35,37 @@ export default function Banner() {
           alt="banner"
           sx={{
               width: "100%",
-              top: "140px",
-              height: "700px",
+              top: "-20px",
+              height: "800px",
               position: "absolute",
               zIndex: -1,
               }}
           />
+      </Box>
+      <Box 
+        sx={{
+          zIndex: 1,
+          background: "#FFFFFF",
+          padding: "3em 77px",
+          }}
+      >
+      <Text 
+        sx={{
+          fontSize: "24",
+          fontFamily: "Dm Sans",
+          color: "#000000",
+          margin: "0em 0em 0em 0em",
+          }}
+        >Search</Text>
+        <Input 
+          placeholder="" 
+          sx={{
+            width: "90%",
+            height: "54px",
+            margin: "0em 0em 1em 0em",
+            color: "#FFFFFF",
+            }}
+        />
       </Box>
     </Box>
   );
