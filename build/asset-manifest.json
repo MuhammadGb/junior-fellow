@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/junior-fellow/static/css/main.55755000.chunk.css",
+    "main.js": "/junior-fellow/static/js/main.b993c2ae.chunk.js",
+    "main.js.map": "/junior-fellow/static/js/main.b993c2ae.chunk.js.map",
+    "runtime-main.js": "/junior-fellow/static/js/runtime-main.cfb78381.js",
+    "runtime-main.js.map": "/junior-fellow/static/js/runtime-main.cfb78381.js.map",
+    "static/js/2.d2232844.chunk.js": "/junior-fellow/static/js/2.d2232844.chunk.js",
+    "static/js/2.d2232844.chunk.js.map": "/junior-fellow/static/js/2.d2232844.chunk.js.map",
+    "index.html": "/junior-fellow/index.html",
+    "static/css/main.55755000.chunk.css.map": "/junior-fellow/static/css/main.55755000.chunk.css.map",
+    "static/js/2.d2232844.chunk.js.LICENSE.txt": "/junior-fellow/static/js/2.d2232844.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/junior-fellow/static/media/DMSans-Regular.067ebd7e.ttf",
+    "static/media/banner.335cf111.jpeg": "/junior-fellow/static/media/banner.335cf111.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cfb78381.js",
+    "static/js/2.d2232844.chunk.js",
+    "static/css/main.55755000.chunk.css",
+    "static/js/main.b993c2ae.chunk.js"
+  ]
+}
