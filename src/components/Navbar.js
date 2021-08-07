@@ -12,7 +12,11 @@ export default function Navbar() {
             position: "absolute",
             height: "140px",
             alignItems: "center",
-            }}
+            '@media only screen and (max-width: 1024px)': {
+              justifyContent: "center",
+              width: "834px",
+            }
+          }}
         >
       <Heading 
         fontSize="35px" 
@@ -26,7 +30,10 @@ export default function Navbar() {
             fontFamily: "Merriweather", 
             letterSpacing: -2,
             fontWeight: 300,
-            }}
+            '@media only screen and (max-width: 1024px)': {
+              left: "321px",
+            }
+          }}
         >
         MyTestApp
       </Heading>

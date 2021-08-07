@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Banner from './Banner';
-import { Text } from '@chakra-ui/react';
+import { Text, Box } from '@chakra-ui/react';
 
 const styles = ({
     title: {
@@ -19,7 +19,12 @@ const styles = ({
         display: "flex",
         flexDirection: "column",
         margin: "0px 0px 67px 77px",
-        width: "96%",
+        width: "93%",
+        border: "4px solid red",
+        '@media only screen and (max-width: 1024px)': {
+          width: "13%",
+          border: "4px solid blue",
+        }
     },
     cover: {
         width: "300px",
@@ -55,12 +60,10 @@ export default function Movie() {
         while(page<4 ){
             const data = await fetch(`http://www.omdbapi.com/?s=${searchMovies}&page=${page}&apikey=df7a2100`);
             const res = await data.json();
-            //console.log(res);
             res.Search.forEach(movie => moviesList.push(movie))
             page++;
         }
         setMovies(moviesList)
-        console.log(movies);
     };
 
     const movie = movies.filter(movie => movie.Type === "movie");
@@ -77,8 +80,18 @@ export default function Movie() {
 
     return(
         <div>
-            <Banner test={"1"} defaultValue={searchMovies} handleChange={handleChange}/>
-            <div style={styles.movies}>
+            <Banner defaultValue={searchMovies} handleChange={handleChange}/>
+            <Box 
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: "0px 0px 67px 77px",
+                    width: "93%",
+                    '@media only screen and (max-width: 1024px)': {
+                      width: "720px",
+                    }
+                }}
+            >
                 <Text 
                     sx={{
                         fontSize: "24px",
@@ -189,7 +202,7 @@ export default function Movie() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Box>
         </div>
     )
 }

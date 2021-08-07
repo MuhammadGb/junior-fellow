@@ -2,9 +2,7 @@ import * as React from 'react';
 import banner from '../assets/banner.jpeg';
 import { Box, Image, Text, Input } from '@chakra-ui/react';
 
-export default function Banner({test, value, handleChange}) {
-
-  console.log(test)
+export default function Banner({value, handleChange}) {
 
   return (
     <Box 
@@ -18,7 +16,10 @@ export default function Banner({test, value, handleChange}) {
           height: "680px",
           display: "flex",
           flexDirection: "row",
-          alignItems: "center"
+          alignItems: "center",
+          '@media only screen and (max-width: 1024px)': {
+            justifyContent: "center"
+          }
         }}
       >
         <Text 
@@ -32,8 +33,16 @@ export default function Banner({test, value, handleChange}) {
             letterSpacing: "-1px", 
             fontWeight: 600,
             fontFamily: "Dm Sans",
-            color: "#FFFFFF"
-              }}
+            color: "#FFFFFF",
+            '@media only screen and (max-width: 1024px)': {
+              left: -130,
+              top: 10,
+              textAlign: "center",
+              fontSize: "72px",
+              letterSpacing: "-5%",
+              lineHeight: "94px",
+            }
+          }}
         >Watch something incredible.</Text>
       </Box>
       <Box>
@@ -46,7 +55,12 @@ export default function Banner({test, value, handleChange}) {
             height: "800px",
             position: "absolute",
             zIndex: -1,
-              }}
+            '@media only screen and (max-width: 1024px)': {
+              width: "834px",
+              height: "500px",
+              top: "135px",
+            }
+          }}
           />
       </Box>
       <Box 
@@ -76,7 +90,10 @@ export default function Banner({test, value, handleChange}) {
             color: "black",
             backgroundColor: "#FFFFFF",
             border: "1px solid #000000",
-            }}
+            '@media only screen and (max-width: 1024px)': {
+              width: "680px",
+            }
+          }}
         />
       </Box>
     </Box>
