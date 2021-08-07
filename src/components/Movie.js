@@ -58,7 +58,7 @@ export default function Movie() {
     const moviesList = [];
     const fetchMovies = async(page=1) => {
         while(page<4 ){
-            const data = await fetch(`http://www.omdbapi.com/?s=${searchMovies}&page=${page}&apikey=df7a2100`);
+            const data = await fetch(`https://www.omdbapi.com/?s=${searchMovies}&page=${page}&apikey=df7a2100`);
             const res = await data.json();
             res.Search.forEach(movie => moviesList.push(movie))
             page++;
@@ -76,7 +76,7 @@ export default function Movie() {
     useEffect(() => {
         const timeOutId = setTimeout(() => fetchMovies(), 2500);
         return () => clearTimeout(timeOutId);   
-    }, [movies]);
+    }, [movies, movie, series, game]);
 
     return(
         <div>
